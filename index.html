@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+       
     <style>
         :root {
             --primary-color: #1e83c6;
@@ -33,7 +33,7 @@
             --dark-bg: #0b212f;
             --accent-color: #f8f9fa;
             --whatsapp-color: #25d366;
-            --navy-nav: #0b212f;
+            --navy-nav: #1e83c6; /* Updated to match logo primary color */
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -123,57 +123,55 @@
 
         /* Navbar Customization */
         .navbar {
-            background-color: #0b212f !important;
+            background-color: #0b212f;
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         .navbar-brand img {
-            height: 75px;
+            height: 150px;
             width: auto;
         }
         @media (min-width: 768px) {
             .navbar-brand img { height: 50px; }
         }
-        
-        /* Updated Smooth Hover Effect */
+    /* Updated Smooth Hover Effect */
         .nav-link {
             font-weight: 600;
-            color: white !important;
+            color: rgba(255, 255, 255, 0.9) !important;
             cursor: pointer;
-            padding: 8px 18px !important;
-            margin: 0 2px;
-            border-radius: 6px;
+            padding: 10px 20px !important;
+            margin: 0 5px;
+            border-radius: 50px;
             position: relative;
-            transition: color 0.3s ease, background-color 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
         }
         
-        /* Underline effect */
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: var(--secondary-color);
-            transition: width 0.3s ease, left 0.3s ease;
-        }
-
         .nav-link:hover { 
-            color: var(--primary-color) !important; 
-            background: white; 
-        }
-
-        .nav-link:hover::after, 
-        .nav-link.active::after { 
-            width: 60%; 
-            left: 20%; 
+            color: #ffffff !important; 
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
         }
 
         .nav-link.active { 
-            color: var(--primary-color) !important; 
-            background:white; 
+            color: #ffffff !important; 
+            background: var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(0, 144, 88, 0.3);
         }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
         .hero-section {
             background: linear-gradient(rgba(11, 33, 47, 0.85), rgba(0, 144, 88, 0.7)), 
                         url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80');
@@ -291,7 +289,7 @@
             <a class="navbar-brand d-flex align-items-center" href="index.html" onclick="showPage('home')">
                 <img src="jan.png" alt="" class="">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler color-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
