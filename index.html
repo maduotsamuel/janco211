@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JANCO INVESTMENTS CO. LTD | Quality & Integrity</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="JANCO INVESTMENTS CO. LTD - Leading provider of General Trading, Supply, Construction, and ICT solutions in South Sudan & Kenya.">
+    <meta name="keywords" content="Janco Investments, Construction Juba, Solar Power South Sudan, ICT Solutions Kenya, Logistics East Africa">
+    <meta property="og:title" content="JANCO INVESTMENTS CO. LTD | Quality & Integrity">
+    <meta property="og:description" content="Shaping shared prosperity through General Trading, Supply, and Construction.">
+    <meta property="og:type" content="website">
+
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1e83c6;
+            --primary-hover: #3ea1e4;
+            --secondary-color: #009058;
+            --dark-bg: #0b212f;
+            --accent-color: #f8f9fa;
+            --whatsapp-color: #25d366;
+            --navy-nav: #0b212f;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+            position: relative;
+            background-color: #fff;
+            overflow-x: hidden;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* --- WhatsApp Sticky Toggle --- */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            background-color: var(--whatsapp-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: pulse-green 2s infinite;
+        }
+        .whatsapp-sticky:hover {
+            transform: scale(1.1);
+            color: white;
+            background-color: #128c7e;
+        }
+        @keyframes pulse-green {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* --- Responsive Typography --- */
+        .hero-title { font-size: calc(2.2rem + 2vw); line-height: 1.1; }
+        .hero-subtitle { font-size: calc(1.1rem + 0.5vw); font-weight: 300; opacity: 0.9; }
+        h2 { font-size: calc(1.5rem + 1vw); }
+
+        /* --- Scroll Animation --- */
+        .js-enabled .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, transform;
+        }
+        .js-enabled .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animated Background Elements */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(30, 131, 198, 0.05) 0%, rgba(0, 144, 88, 0.03) 100%);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: move 25s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%) rotate(0deg); }
+            to { transform: translate(20%, 20%) rotate(360deg); }
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            background-color: var(--navy-nav) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .navbar-brand img {
+            height: 35px;
+            width: auto;
+            filter: brightness(0) invert(1); 
+        }
+        @media (min-width: 768px) {
+            .navbar-brand img { height: 50px; }
+        }
+        
+        /* Updated Smooth Hover Effect */
+        .nav-link {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8) !important;
+            cursor: pointer;
+            padding: 8px 18px !important;
+            margin: 0 2px;
+            border-radius: 6px;
+            position: relative;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        
+        /* Underline effect */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-link:hover { 
+            color: #ffffff !important; 
+            background: rgba(255, 255, 255, 0.1); 
+        }
+
+        .nav-link:hover::after, 
+        .nav-link.active::after { 
+            width: 60%; 
+            left: 20%; 
+        }
+
+        .nav-link.active { 
+            color: #ffffff !important; 
+            background: rgba(255, 255, 255, 0.15); 
+        }
+
+        .navbar-toggler { filter: invert(1); }
+        
+        .hero-section {
+            background: linear-gradient(rgba(11, 33, 47, 0.85), rgba(0, 144, 88, 0.7)), 
+                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .hero-section { background-attachment: scroll; min-height: 60vh; }
+        }
+        
+        /* Carousel Styling */
+        .home-carousel {
+            margin-top: -60px;
+            z-index: 10;
+            position: relative;
+        }
+        .carousel-item img {
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        @media (min-width: 768px) {
+            .carousel-item img { height: 500px; }
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .card {
+            border: none;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.9);
+            height: 100%;
+        }
+        .card:hover { transform: translateY(-5px); }
+        
+        /* Gallery */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 250px;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(30, 131, 198, 0.8); color: white;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-item:hover img { transform: scale(1.1); }
+
+        .value-icon { font-size: 2rem; color: var(--secondary-color); margin-bottom: 15px; }
+        
+        /* Modal Customization */
+        .modal-content { border-radius: 15px; border: none; overflow: hidden; }
+        .modal-header { background: var(--navy-nav); color: white; }
+
+        .footer {
+            background-color: var(--dark-bg);
+            border-top: 5px solid var(--secondary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        .bg-custom-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        .page-content { display: none; }
+        .page-content.active { display: block; animation: fadeIn 0.4s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Detail Toggles */
+        .service-details { display: none; margin-top: 15px; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 10px; }
+        .service-details.show { display: block; animation: fadeIn 0.3s ease; }
+    </style>
+</head>
+<body class="js-enabled">
+
+    <!-- WhatsApp Sticky -->
+    <a href="https://wa.me/211928239848" class="whatsapp-sticky" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top py-2" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#" onclick="showPage('home')">
+                <img src="janco_logo.png" alt="JANCO Logo" class="me-2">
+                <span class="fw-bold text-white">JANCO</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" id="nav-home" onclick="showPage('home')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-services" onclick="showPage('services')">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-products" onclick="showPage('products')">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-gallery" onclick="showPage('gallery')">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" onclick="closeNavbar()">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="bg-animation" aria-hidden="true">
+        <div class="blob"></div>
+    </div>
+
+    <!-- HOME PAGE -->
+    <main id="home-page" class="page-content active">
+        <header class="hero-section">
+            <div class="container px-4">
+                <h1 class="fw-bold hero-title mb-3">JANCO INVESTMENTS</h1>
+                <p class="hero-subtitle mb-4 mb-lg-5 mx-auto" style="max-width: 800px;">
+                    Shaping shared prosperity through General Trading, Supply, Construction, and ground transportation solutions in South Sudan & Kenya.
+                </p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <button onclick="showPage('services')" class="btn btn-light btn-lg px-5 py-3 text-primary fw-bold shadow">Our Expertise</button>
+                    <button onclick="document.getElementById('contact').scrollIntoView()" class="btn btn-outline-light btn-lg px-5 py-3">Get in Touch</button>
+                </div>
+            </div>
+        </header>
+       <!-- Image Carousel -->
+        <section class="container home-carousel mb-3 reveal">
+            <div id="mainCarousel" class="carousel slide carousel-fade shadow-lg" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-4">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Logistics">
+                        <div class="carousel-caption">
+                            <h3 class="fw-bold h6 h4-md mb-0">Global Logistics Solutions</h3>
+                            <p class="small d-none d-md-block mt-2">Efficient ground transportation and supply chain management across East Africa.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="https://images.unsplash.com/photo-1509391366360-fe5bb58583bb?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Solar Energy">
+                        <div class="carousel-caption">
+                            <h3 class="fw-bold h6 h4-md mb-0">Sustainable Energy</h3>
+                            <p class="small d-none d-md-block mt-2">Providing cutting-edge solar and ICT solutions to power the future.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="https://images.unsplash.com/photo-1503387762-592dee58292b?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Construction">
+                        <div class="carousel-caption">
+                            <h3 class="fw-bold h6 h4-md mb-0">Structural Excellence</h3>
+                            <p class="small d-none d-md-block mt-2">Premium construction materials and expert engineering consultancy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-5 reveal">
+            <div class="container">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-6">
+                        <h2 class="section-title">Who We Are</h2>
+                        <p class="lead text-primary">Reliable Business Partners Since 2018.</p>
+                        <p>Established in 2018, <strong>JANCO Investments Co. Ltd</strong> is a registered general trading entity. We pride ourselves on a hands-on approach and open communication, ensuring we deliver value at every step of the journey.</p>
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6">
+                                <div class="p-3 bg-light rounded shadow-sm border-start border-primary border-4">
+                                    <h6 class="fw-bold text-primary mb-1"><i class="fa-solid fa-eye me-2"></i> Vision</h6>
+                                    <p class="small mb-0">Shared prosperity guided by integrity.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 bg-light rounded shadow-sm border-start border-success border-4">
+                                    <h6 class="fw-bold text-success mb-1"><i class="fa-solid fa-bullseye me-2"></i> Mission</h6>
+                                    <p class="small mb-0">Quality and cost-effective delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-4 bg-custom-gradient text-white rounded-4 shadow-lg">
+                            <h3 class="h5 mb-4 border-bottom border-white border-opacity-25 pb-2">Our Core Values</h3>
+                            <div class="mb-3 d-flex"><i class="fa-solid fa-check-circle me-3 mt-1 text-warning"></i><p class="small mb-0"><strong>Justice:</strong> Fair dealings for all stakeholders.</p></div>
+                            <div class="mb-3 d-flex"><i class="fa-solid fa-check-circle me-3 mt-1 text-warning"></i><p class="small mb-0"><strong>Accountability:</strong> Transparent undertakings.</p></div>
+                            <div class="mb-0 d-flex"><i class="fa-solid fa-check-circle me-3 mt-1 text-warning"></i><p class="small mb-0"><strong>Commitment:</strong> Responsive service delivery.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section class="py-5 container">
+            <div class="row g-4">
+                    <h2 class="section-title">What We Offer</h2>
+                        <p class="lead text-primary">Comprehensive solutions tailored for regional markets.</p>
+                <div class="col-md-4 reveal">
+                    <div class="card p-4">
+                        <i class="fa-solid fa-truck-loading value-icon"></i>
+                        <h5 class="fw-bold">General Supply</h5>
+                        <p class="small text-muted">Cross-border supply of food items, scholastic materials, and beauty products.</p>
+                        <button onclick="toggleDetails(1)" class="btn btn-sm btn-outline-primary">Learn More</button>
+                        <div id="details-1" class="service-details">
+                            <p class="mb-0">We manage end-to-end logistics between Kenya and South Sudan, ensuring customs compliance and timely delivery of critical supplies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="card p-4">
+                        <i class="fa-solid fa-laptop-code value-icon"></i>
+                        <h5 class="fw-bold">ICT & Solar</h5>
+                        <p class="small text-muted">Sustainable energy installations and modern internet infrastructure.</p>
+                        <button onclick="toggleDetails(2)" class="btn btn-sm btn-outline-primary">Learn More</button>
+                        <div id="details-2" class="service-details">
+                            <p class="mb-0">Specializing in off-grid solar solutions for NGOs and businesses, plus network security and VSAT installations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="card p-4">
+                        <i class="fa-solid fa-building value-icon"></i>
+                        <h5 class="fw-bold">Construction</h5>
+                        <p class="small text-muted">Premium building materials and civil engineering consultancy.</p>
+                        <button onclick="toggleDetails(3)" class="btn btn-sm btn-outline-primary">Learn More</button>
+                        <div id="details-3" class="service-details">
+                            <p class="mb-0">From bridge construction to urban housing, we supply high-grade cement, structural steel, and professional site management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+           <section class="py-5 container">
+            <div class="row g-4">
+                   <h2 class="section-title">Products Catalog</h2>
+                   <p class="lead text-primary">Industrial and commercial products for all sectors.</p>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=600&q=80" class="card-img-top" style="height: 200px; object-fit: cover;" loading="lazy" alt="Solar Power Kits">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Solar Power Kits</h5>
+                            <p class="small text-muted">Off-grid solutions for homes and businesses.</p>
+                            <button onclick="showContactModal('Solar Power Kits')" class="btn btn-primary btn-sm w-100">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?auto=format&fit=crop&w=600&q=80" class="card-img-top" style="height: 200px; object-fit: cover;" loading="lazy" alt="Building Materials">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Building Materials</h5>
+                            <p class="small text-muted">Bulk supply of cement and structural timber.</p>
+                            <button onclick="showContactModal('Building Materials')" class="btn btn-primary btn-sm w-100">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" class="card-img-top" style="height: 200px; object-fit: cover;" loading="lazy" alt="Industrial Equipment">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Industrial Equipment</h5>
+                            <p class="small text-muted">Heavy-duty machinery for construction sites.</p>
+                            <button onclick="showContactModal('Industrial Equipment')" class="btn btn-primary btn-sm w-100">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SERVICES PAGE -->
+    <main id="services-page" class="page-content">
+        <section class="py-5 bg-light text-center">
+            <div class="container">
+                <h1 class="fw-bold">Our Services</h1>
+                <p class="lead text-muted">Specialized solutions tailored for East African markets.</p>
+            </div>
+        </section>
+        <section class="py-5 container">
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="card p-4">
+                        <i class="fa-solid fa-truck-loading value-icon"></i>
+                        <h5 class="fw-bold">General Supply</h5>
+                        <p class="small text-muted">Cross-border supply of food items, scholastic materials, and beauty products.</p>
+                        <button onclick="toggleDetails(1)" class="btn btn-sm btn-outline-primary">Learn More</button>
+                        <div id="details-1" class="service-details">
+                            <p class="mb-0">We manage end-to-end logistics between Kenya and South Sudan, ensuring customs compliance and timely delivery of critical supplies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="card p-4">
+                        <i class="fa-solid fa-laptop-code value-icon"></i>
+                        <h5 class="fw-bold">ICT & Solar</h5>
+                        <p class="small text-muted">Sustainable energy installations and modern internet infrastructure.</p>
+                        <button onclick="toggleDetails(2)" class="btn btn-sm btn-outline-primary">Learn More</button>
+                        <div id="details-2" class="service-details">
+                            <p class="mb-0">Specializing in off-grid solar solutions for NGOs and businesses, plus network security and VSAT installations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="card p-4">
+                        <i class="fa-solid fa-building value-icon"></i>
+                        <h5 class="fw-bold">Construction</h5>
+                        <p class="small text-muted">Premium building materials and civil engineering consultancy.</p>
+                        <button onclick="toggleDetails(3)" class="btn btn-sm btn-outline-primary">Learn More</button>
+                        <div id="details-3" class="service-details">
+                            <p class="mb-0">From bridge construction to urban housing, we supply high-grade cement, structural steel, and professional site management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PRODUCTS PAGE -->
+    <main id="products-page" class="page-content">
+        <section class="py-5 bg-light text-center">
+            <div class="container">
+                <h1 class="fw-bold">Product Catalog</h1>
+                <p>Industrial and commercial grade products.</p>
+            </div>
+        </section>
+        <section class="py-5 container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=600&q=80" class="card-img-top" style="height: 200px; object-fit: cover;" loading="lazy" alt="Solar Power Kits">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Solar Power Kits</h5>
+                            <p class="small text-muted">Off-grid solutions for homes and businesses.</p>
+                            <button onclick="showContactModal('Solar Power Kits')" class="btn btn-primary btn-sm w-100">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?auto=format&fit=crop&w=600&q=80" class="card-img-top" style="height: 200px; object-fit: cover;" loading="lazy" alt="Building Materials">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Building Materials</h5>
+                            <p class="small text-muted">Bulk supply of cement and structural timber.</p>
+                            <button onclick="showContactModal('Building Materials')" class="btn btn-primary btn-sm w-100">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="card border-0 shadow-sm overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" class="card-img-top" style="height: 200px; object-fit: cover;" loading="lazy" alt="Industrial Equipment">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Industrial Equipment</h5>
+                            <p class="small text-muted">Heavy-duty machinery for construction sites.</p>
+                            <button onclick="showContactModal('Industrial Equipment')" class="btn btn-primary btn-sm w-100">Inquire Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GALLERY PAGE -->
+    <main id="gallery-page" class="page-content">
+        <section class="py-5 bg-light text-center">
+            <div class="container">
+                <h1 class="fw-bold">Portfolio Gallery</h1>
+                <p>Visualizing our impact in the region.</p>
+            </div>
+        </section>
+        <section class="py-5 container">
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="gallery-item shadow-sm" onclick="openLightbox('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80', 'Corporate Offices', 'Modernizing workspace infrastructure in Juba.')">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" loading="lazy" alt="Corporate Offices">
+                        <div class="gallery-overlay text-center p-3">
+                            <i class="fa-solid fa-magnifying-glass-plus mb-2 h4"></i>
+                            <h6 class="mb-0">Corporate Offices</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="gallery-item shadow-sm" onclick="openLightbox('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80', 'Logistics Hub', 'Managing major cross-border transit routes.')">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" loading="lazy" alt="Logistics Hub">
+                        <div class="gallery-overlay text-center p-3">
+                            <i class="fa-solid fa-magnifying-glass-plus mb-2 h4"></i>
+                            <h6 class="mb-0">Logistics Hub</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="gallery-item shadow-sm" onclick="openLightbox('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=800&q=80', 'Civil Works', 'Major construction site overview.')">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=800&q=80" loading="lazy" alt="Civil Works">
+                        <div class="gallery-overlay text-center p-3">
+                            <i class="fa-solid fa-magnifying-glass-plus mb-2 h4"></i>
+                            <h6 class="mb-0">Civil Works</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-md-5">
+                    <h2 class="section-title">Reach Us</h2>
+                    <div class="mt-4">
+                        <p><i class="fa-solid fa-location-dot text-primary me-2"></i> Hi Malalal, Juba, South Sudan</p>
+                        <p><i class="fa-solid fa-envelope text-primary me-2"></i> Jancoinvestments211@gmail.com</p>
+                        <p><i class="fa-brands fa-whatsapp text-primary me-2"></i> South Sudan(HQs) +211928239848</p>
+                        <p><i class="fa-solid fa-phone text-primary me-2"></i> Kenya: +254 745 613 361</p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="card p-4 shadow-sm border-0">
+                          <input type="hidden" name="access_key" value="b7944b93-0ec8-4106-8adf-bc19277c7a05">
+                        <div class="mb-3"><input name=Name type="text" class="form-control" placeholder="Name" required></div>
+                        <div class="mb-3"><input name=Email type="email" class="form-control" placeholder="Email" required></div>
+                        <div class="mb-3"><textarea name=Message class="form-control" id="contactMsg" rows="3" placeholder="How can we help?" required></textarea></div>
+                        <button class="btn btn-primary w-100 py-2 fw-bold">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modalTitle">Project Detail</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="" id="modalImg" class="img-fluid w-100" alt="Full View">
+                    <div class="p-3">
+                        <p id="modalDesc" class="text-muted mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center text-md-start">
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <h5 class="fw-bold mb-3">JANCO INVESTMENTS CO. LTD</h5>
+                    <p class="small opacity-75" style="max-width: 400px;">Shaping shared prosperity through integrity, accountability, and professional commitment in general trading and construction.</p>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold">Contact Info</h6>
+                    <p class="small opacity-75 mb-1">South Sudan: +211928239848</p>
+                    <p class="small opacity-75">Kenya: +254 745 613 361</p>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold">Headquarters</h6>
+                    <p class="small opacity-75">Juba, South Sudan</p>
+                </div>
+            </div>
+            <hr class="my-4 opacity-10">
+            <p class="small text-center opacity-50 mb-0">&copy; 2024 JANCO INVESTMENTS CO. LTD.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initObserver();
+            triggerInitialReveal();
+        });
+
+        function toggleDetails(id) {
+            const el = document.getElementById(`details-${id}`);
+            if (el) el.classList.toggle('show');
+        }
+
+        function openLightbox(img, title, desc) {
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            new bootstrap.Modal(document.getElementById('galleryModal')).show();
+        }
+
+        function closeNavbar() {
+            const navbarCollapse = document.getElementById('navbarNav');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                bootstrap.Collapse.getInstance(navbarCollapse)?.hide();
+            }
+        }
+
+        function showPage(pageId) {
+            closeNavbar();
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId + '-page')?.classList.add('active');
+            
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            document.getElementById('nav-' + pageId)?.classList.add('active');
+            
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            setTimeout(() => {
+                initObserver();
+                triggerInitialReveal();
+            }, 50);
+        }
+
+        let observer;
+        function initObserver() {
+            if (observer) observer.disconnect();
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        function triggerInitialReveal() {
+            const vh = window.innerHeight;
+            document.querySelectorAll('.reveal:not(.active)').forEach(el => {
+                if (el.getBoundingClientRect().top < vh) el.classList.add('active');
+            });
+        }
+
+        function showContactModal(prod) {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            const msgArea = document.getElementById('contactMsg');
+            msgArea.value = `I am interested in: ${prod}`;
+            msgArea.focus();
+        }
+
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerText = "Sent Successfully!";
+            btn.classList.replace('btn-primary', 'btn-success');
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerText = "Send Request";
+                btn.classList.replace('btn-success', 'btn-primary');
+                btn.disabled = false;
+                this.reset();
+            }, 3000);
+        };
+    </script>
+</body>
+</html>
