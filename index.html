@@ -204,6 +204,11 @@
             .carousel-item img { height: 500px; }
         }
 
+        .footer-logo img {
+            height: 60px;
+            width: auto;
+            margin-bottom: 15px;
+        }
         .section-title {
             position: relative;
             padding-bottom: 15px;
@@ -228,6 +233,7 @@
         }
         .card:hover { transform: translateY(-5px); }
         
+
         /* Gallery */
         .gallery-item {
             position: relative;
@@ -384,6 +390,62 @@
             }
         }
 
+        .footer {
+  background-color: #0b2233;
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand img {
+  max-width: 140px;
+  margin-bottom: 15px;
+}
+
+.footer-brand h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cfd8dc;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #cfd8dc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 
         .bg-custom-gradient {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -395,6 +457,9 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+         @media (min-width: 500px) {
+            .text-center img { height: 250px; }
+        }
         /* Detail Toggles */
         .service-details { display: none; margin-top: 15px; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 10px; }
         .service-details.show { display: block; animation: fadeIn 0.3s ease; }
@@ -437,7 +502,8 @@
     <main id="home-page" class="page-content active">
         <header class="hero-section">
             <div class="container px-4">
-                <h1 class="fw-bold hero-title mb-3">JANCO INVESTMENTS</h1>
+                <div class="text-center">
+                  <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-blue-400 uppercase"><img src="jan.png" alt=""> </span></div>
                 <p class="hero-subtitle mb-4 mb-lg-5 mx-auto" style="max-width: 800px;">
                     Shaping shared prosperity through General Trading, Supply, Construction, and ground transportation solutions in South Sudan & Kenya.
                 </p>
@@ -660,7 +726,7 @@
                 </div>
                 <div class="col-lg-6 ps-lg-5">
                     <span class="badge-service">Logistics & Trade</span>
-                    <h2 class="fw-bold mb-4">General Supply <span style="color: var(--primary-color);">AND</span> Logistics</h2>
+                    <h2 class="fw-bold mb-4">General Supply and Logistics</h2>
                     <p class="mb-4">Our general supply division operates with a focus on efficiency and quality. We manage the entire procurement lifecycle, from sourcing from international manufacturers to last-mile delivery across borders.</p>
                     <ul class="feature-list">
                         <li>
@@ -698,7 +764,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-1 pe-lg-5">
                     <span class="badge-service">Technology & Power</span>
-                    <h2 class="fw-bold mb-4">Sustainable <span style="color: var(--secondary-color);">AND</span> ICT Solutions</h2>
+                    <h2 class="fw-bold mb-4">Sustainable and modern ICT equipments</h2>
                     <p class="mb-4">We empower businesses to thrive in a digital economy while reducing their carbon footprint through our integrated technology and energy services.</p>
                     <ul class="feature-list">
                         <li>
@@ -735,7 +801,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-1 pe-lg-5">
                     <span class="badge-service">Civil Engineering Services</span>
-                    <h2 class="fw-bold mb-4">Construction <span style="color: var(--secondary-color);">AND</span> Building Materials</h2>
+                    <h2 class="fw-bold mb-4">Construction and Building Materials</h2>
                     <p class="mb-4">We empower businesses to thrive in a digital economy while reducing their carbon footprint through our integrated technology and energy services.</p>
                     <ul class="feature-list">
                         <li>
@@ -785,7 +851,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4 reveal">
                     <div class="card border-0 shadow-sm overflow-hidden">
-                        <img src="img/building1.jpg" style="height: 200px; object-fit: cover;" loading="lazy" alt="Building Materials">
+                        <img src="img/building1.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" loading="lazy" alt="Building Materials">
                         <div class="card-body">
                             <h5 class="fw-bold">Building Materials</h5>
                             <p class="small text-muted">Bulk supply of cement and structural timber.</p>
@@ -892,27 +958,32 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container text-center text-md-start">
-            <div class="row gy-4">
-                <div class="col-lg-6">
-                    <h5 class="fw-bold mb-3">JANCO INVESTMENTS CO. LTD</h5>
-                    <p class="small opacity-75" style="max-width: 400px;">Shaping shared prosperity through integrity, accountability, and professional commitment in general trading and construction.</p>
-                </div>
-                <div class="col-lg-3">
-                    <h6 class="fw-bold">Contact Info</h6>
-                    <p class="small opacity-75 mb-1">South Sudan: +211928239848</p>
-                    <p class="small opacity-75">Kenya: +254 745 613 361</p>
-                </div>
-                <div class="col-lg-3">
-                    <h6 class="fw-bold">Headquarters</h6>
-                    <p class="small opacity-75">Juba, South Sudan</p>
-                </div>
-            </div>
-            <hr class="my-4 opacity-10">
-            <p class="small text-center opacity-50 mb-0">&copy; 2024 JANCO INVESTMENTS CO. LTD.</p>
-        </div>
-    </footer>
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <img src="jan.png" alt="Janco Investments Logo">
+      <h3>JANCO INVESTMENTS CO. LTD</h3>
+      <p>
+        Shaping shared prosperity through integrity, accountability,
+        and professional commitment in general trading and construction.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Info</h4>
+      <p>South Sudan: +211 928 239 848</p>
+      <p>Kenya: +254 745 613 361</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Headquarters</h4>
+      <p>Juba, South Sudan</p>
+    </div>
+
+  </div>
+</footer>
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
@@ -1000,4 +1071,3 @@
     </script>
 </body>
 </html>
-
